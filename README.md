@@ -1,27 +1,26 @@
 # P1CatalogJsonServer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+Welcome, this is a todo list project using the following technologies;
+Frontend
 
-## Development server
+- Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Backend
 
-## Code scaffolding
+- json-server (Using this to make a mock, wanted to focus on practicing frontend in this project)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to run? (Type these commands in the terminal)
 
-## Build
+1. Install all the dependencies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   > npm install
 
-## Running unit tests
+2. Run mock json-server first
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   > json-server —watch db.json
 
-## Running end-to-end tests
+3. Run angular
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   > ng serve -o
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Enjoy

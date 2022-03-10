@@ -1,0 +1,56 @@
+<h2 mat-dialog-title>Add Task</h2>
+<div mat-dialog-content class="mat-typography">
+  <form [formGroup]="taskForm">
+    <!-- Field: Task Name -->
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input formControlName="taskTitle" matInput placeholder="Placeholder">
+    </mat-form-field>
+
+    <!-- Field: Task Category -->
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select [(ngModel)]="selectedCategory" formControlName="taskCategory" name="category">
+        <mat-option *ngFor="let category of categories" [value]="category.value">
+          {{category.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Field: Task Date -->
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="taskDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- Field: Task Duration -->
+    <mat-form-field appearance="outline">
+      <mat-label>Duration (Hours)</mat-label>
+      <input matInput formControlName="taskDuration" type="number" placeholder="Placeholder">
+    </mat-form-field>
+
+    <!-- Field: Task Description -->
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="taskDescription"></textarea>
+    </mat-form-field>
+
+    <!-- Field: Priority-->
+    <label id="example-radio-group-label">Select Priority Level</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+      formControlName="taskPriority" [(ngModel)]="selectedPriority">
+      <mat-radio-button class="example-radio-button" *ngFor="let priority of priorities" [value]="priority.value">
+        {{priority.viewValue}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </form>
+</div>
+
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+  <button mat-raised-button style="margin-left: 8px;" color="primary" [mat-dialog-close]="true" cdkFocusInitial
+    (click)="addTask()">{{actionName}}</button>
+</mat-dialog-actions>
