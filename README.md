@@ -7,7 +7,8 @@ Frontend
 
 Backend
 - json-server (Using this to make a mock, wanted to focus on practicing frontend in this project)
-- 
+
+
 
 ## How to run? (Type these commands in the terminal)
 
