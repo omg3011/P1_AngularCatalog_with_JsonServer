@@ -18,7 +18,7 @@ Backend
 
 2. Run mock json-server first
 
-   > json-server —watch db.json
+   > json-server --watch db.json
 
 3. Open another terminal and run angular
 
