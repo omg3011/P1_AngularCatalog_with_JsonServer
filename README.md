@@ -20,7 +20,7 @@ Backend
 
    > json-server —watch db.json
 
-3. Run angular
+3. Open another terminal and run angular
 
    > ng serve -o
 
